@@ -73,11 +73,16 @@ function main() {
     if(checkString=="concert-this") {
         concert();
     } else if (checkString=="spotify-this-song") {
-      spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+      keyword="The Sign";
+      spotify.search({ type: 'track', query: keyword }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
-        console.log(data[0]);
+        for(var i=0; i<data.tracks.items.length;i++) {
+          if(data.tracks.items[i].name==keyword) {
+            console.log(data.tracks.items[i].artists[0].name);
+          }
+        }
       })
     } else if (checkString=="movie-this") {
         movie();
@@ -92,7 +97,7 @@ function main() {
             main(); 
         });
     } else {
-        console.log("Error!");
+        console.log("Error! There is no command!!");
         return;
     }
 }
