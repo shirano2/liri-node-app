@@ -16,7 +16,7 @@ console.log(logMessage);
 function log() {
   fs.appendFile("log.txt", logMessage, function(err) {
     if (err) {
-      console.log("log recording failed: "+err);
+      console.log("log recording failed : "+err);
     }
   });  
 }
@@ -24,12 +24,12 @@ function log() {
 function concert(){
     keyword=process.argv.slice(3).join("+");
     logMessage=logMessage+", command : concert-this, keyword : "+keyword+";";
-    axios.get("https://rest.bandsintown.com/artists/" + keyword + "/events?app_id=codingbootcamp").then(function(response) {
+    axios.get("https://rest.bandsintown.com/artists/"+keyword+"/events?app_id=codingbootcamp").then(function(response) {
         for(var i=0; i<response.data.length;i++) {
             console.log("============================================================================================================");
-            console.log("Name of the venue: "+response.data[i].venue.name);
-            console.log("Venue location: "+response.data[i].venue.city+" in "+response.data[i].venue.country);
-            console.log("Date of the Event: "+moment(response.data[i].venue.datetime).format("MM/DD/YYYY"));
+            console.log("Name of the venue : "+response.data[i].venue.name);
+            console.log("Venue location : "+response.data[i].venue.city+" in "+response.data[i].venue.country);
+            console.log("Date of the Event : "+moment(response.data[i].venue.datetime).format("MM/DD/YYYY"));
             console.log("");
         }
         console.log("============================================================================================================");
@@ -42,7 +42,7 @@ function concert(){
 	    } else if (error.request) {
 	      console.log(error.request);
 	    } else {
-	      console.log("There are no concerts :", error.message);
+	      console.log("There are no concerts : ", error.message);
 	    }
 	    console.log(error.config);
 	  });
@@ -61,17 +61,17 @@ function spoti() {
   }
   spotify.search(song, function(err, data) {
     if (err) {
-      return console.log('There are no songs: ' + err);
+      return console.log('There are no songs : '+err);
     }
     for(var i=0; i<data.tracks.items.length;i++) {
       if(data.tracks.items[i].name.trim().toLowerCase()==keyword.toLowerCase()) {
         console.log("============================================================================================================");
-        console.log("Artist(s): "+data.tracks.items[i].artists[0].name);
-        console.log("The song's name: "+data.tracks.items[i].name);
+        console.log("Artist(s) : "+data.tracks.items[i].artists[0].name);
+        console.log("The song's name : "+data.tracks.items[i].name);
         if(data.tracks.items[i].preview_url!=null) {
-          console.log("A preview link of the song from Spotify: "+data.tracks.items[i].preview_url);
+          console.log("A preview link of the song from Spotify : "+data.tracks.items[i].preview_url);
         }
-        console.log("The album that the song is from: "+data.tracks.items[i].album.name)
+        console.log("The album that the song is from : "+data.tracks.items[i].album.name)
       }
     }
     console.log("============================================================================================================");
@@ -82,20 +82,20 @@ function movie() {
     if(keyword=="") {
         keyword="Mr.Nobody";
     }
-    logMessage=logMessage+", command : movie-this, keyword : "+keyword+";";
-    axios.get("http://www.omdbapi.com/?t=" + keyword + "&y=&plot=short&apikey=trilogy").then(function(response) {
-        console.log("Title of the movie: " +response.data.Title);
-        console.log("Year the movie came out: " +response.data.Year);
-        console.log("IMDB Rating of the movie: " +response.data.imdbRating);
+    logMessage=logMessage+", command : movie-this, keyword : "+keyword+"\r\n";
+    axios.get("http://www.omdbapi.com/?t="+keyword+"&y=&plot=short&apikey=trilogy").then(function(response) {
+        console.log("Title of the movie : "+response.data.Title);
+        console.log("Year the movie came out : "+response.data.Year);
+        console.log("IMDB Rating of the movie : "+response.data.imdbRating);
         for(var i=0; i<response.data.Ratings.length; i++) {
             if(response.data.Ratings[i].Source=="Rotten Tomatoes") {
-                console.log("Rotten Tomatoes Rating of the movie: "+response.data.Ratings[i].Value);
+                console.log("Rotten Tomatoes Rating of the movie : "+response.data.Ratings[i].Value);
             }
         }
-        console.log("Country where the movie was produced: " +response.data.Country);
-        console.log("Language of the movie: " +response.data.Language);
-        console.log("Plot of the movie: " +response.data.Plot);
-        console.log("Actors in the movie: " +response.data.Actors);
+        console.log("Country where the movie was produced : "+response.data.Country);
+        console.log("Language of the movie : "+response.data.Language);
+        console.log("Plot of the movie : "+response.data.Plot);
+        console.log("Actors in the movie : "+response.data.Actors);
       })
       .catch(function(error) {
         if (error.response) {
@@ -105,7 +105,7 @@ function movie() {
         } else if (error.request) {
           console.log(error.request);
         } else {
-          console.log("There are no movies:", error.message);
+          console.log("There are no movies : "+error.message);
         }
         console.log(error.config);
 	  });
@@ -114,7 +114,7 @@ function movie() {
 function doWhat(){
   fs.readFile("random.txt","utf8",function(error,data) {
       if(error) {
-          return console.log(error);
+          return console.log("I can't do anything : "+error);
       }
       checkString=data.split(",")[0];
       keyword=data.split(",")[1];
