@@ -84,7 +84,6 @@ function movie() {
     }
     logMessage=logMessage+", command : movie-this, keyword : "+keyword+";";
     axios.get("http://www.omdbapi.com/?t=" + keyword + "&y=&plot=short&apikey=trilogy").then(function(response) {
-        // console.log(response.data);
         console.log("Title of the movie: " +response.data.Title);
         console.log("Year the movie came out: " +response.data.Year);
         console.log("IMDB Rating of the movie: " +response.data.imdbRating);
