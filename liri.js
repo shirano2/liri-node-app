@@ -23,7 +23,7 @@ function log() {
 
 function concert(){
     keyword=process.argv.slice(3).join("+");
-    logMessage=logMessage+", command : concert-this, keyword : "+keyword+";";
+    logMessage=logMessage+", command : concert-this, keyword : "+keyword+"\r\n";
     axios.get("https://rest.bandsintown.com/artists/"+keyword+"/events?app_id=codingbootcamp").then(function(response) {
         for(var i=0; i<response.data.length;i++) {
             console.log("============================================================================================================");
@@ -54,7 +54,7 @@ function spoti() {
   if(keyword=="") {
     keyword="The Sign";
   } 
-  logMessage=logMessage+", command : spotify-this-song, keyword : "+keyword+";";
+  logMessage=logMessage+", command : spotify-this-song, keyword : "+keyword+"\r\n";
   var song = {
     "type": "track", 
     "query": keyword
@@ -84,6 +84,7 @@ function movie() {
     }
     logMessage=logMessage+", command : movie-this, keyword : "+keyword+"\r\n";
     axios.get("http://www.omdbapi.com/?t="+keyword+"&y=&plot=short&apikey=trilogy").then(function(response) {
+      console.log("============================================================================================================");
         console.log("Title of the movie : "+response.data.Title);
         console.log("Year the movie came out : "+response.data.Year);
         console.log("IMDB Rating of the movie : "+response.data.imdbRating);
@@ -96,6 +97,7 @@ function movie() {
         console.log("Language of the movie : "+response.data.Language);
         console.log("Plot of the movie : "+response.data.Plot);
         console.log("Actors in the movie : "+response.data.Actors);
+        console.log("============================================================================================================");
       })
       .catch(function(error) {
         if (error.response) {
