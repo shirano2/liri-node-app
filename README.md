@@ -1,81 +1,54 @@
 # liri-node-app
 
-https://github.com/the-Coding-Boot-Camp-at-UT/UTAUS201902FSF3-FT/blob/master/01-class-content/10-nodejs/02-Homework/Instructions/homework_instructions.md
+##This app is simple. LIRI app can search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
-search: function({ type: 'artist OR album OR track', query: 'My search query', limit: 20 }, callback);
+##This is made by Minseok Choi (https://github.com/shirano2).
 
-//
-var Spotify = require('node-spotify-api');
- 
-var spotify = new Spotify({
-  id: <your spotify client id>,
-  secret: <your spotify client secret>
-});
- 
-spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-  if (err) {
-    return console.log('Error occurred: ' + err);
-  }
- 
-console.log(data); 
-});
+##liri.js can take following commands:
 
-//
-var Spotify = require('node-spotify-api');
- 
-var spotify = new Spotify({
-  id: <your spotify client id>,
-  secret: <your spotify client secret>
-});
- 
-spotify
-  .search({ type: 'track', query: 'All the Small Things' })
-  .then(function(response) {
-    console.log(response);
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
+###node liri.js concert-this singer_or_band_name
 
-  //
-  var Spotify = require('node-spotify-api');
- 
-var spotify = new Spotify({
-  id: <your spotify client id>,
-  secret: <your spotify client secret>
-});
- 
-spotify
-  .request('https://api.spotify.com/v1/tracks/7yCPwWs66K8Ba5lFuU2bcx')
-  .then(function(data) {
-    console.log(data); 
-  })
-  .catch(function(err) {
-    console.error('Error occurred: ' + err); 
-  });
+###node liri.js spotify-this-song song_name
 
-  //
-  http://www.omdbapi.com/?apikey=[yourkey]&
+###node liri.js movie-this movie_name
 
-  //
-  https://rest.bandsintown.com
-  /artists/{artistname}/events
-  Name	Description
-artistname *
-string
-(path)	
-The name of the artist. If it contains one of the special characters below, please be sure to replace it by the corresponding code: for / use %252F, for ? use %253F, for * use %252A, and for " use %27C
-
-app_id *
-string
-(query)	
-The application ID assigned to you by Bandsintown
-date
-string
-(query)	
-Can be one of the following values: "upcoming", "past", "all", or a date range e.g. "2015-05-05,2017-05-05". If not specified, only upcoming shows are returned
+###node liri.js do-what-it-says 
 
 
-//
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+##the gif of how to use it
+![gif](https://shirano2.github.io/liri-node-app/images/liri.gif)
 
+
+
+##screenshots
+
+###concert-this
+![Image of concert](https://shirano2.github.io/liri-node-app/images/concert.jpg)
+When you want find singer's or band's concert, please type like node liri.js conert-this The Browning
+
+
+###sportify-this
+![Image of spotify](https://shirano2.github.io/liri-node-app/images/spotify.jpg)
+When you want find a song, please type like node liri.js spotify-this-song take on me
+
+![Image of spotify2](https://shirano2.github.io/liri-node-app/images/spotify_none.jpg)
+If you don't input any name of song after sportify-this-song, Liri app shows you the searching result of "The Sign" by Ace of Base
+
+
+###movie-this
+![Image of movie](https://shirano2.github.io/liri-node-app/images/movie.jpg)
+When you want find a movie, please type like node liri.js movie-this lion king
+
+![Image of movie](https://shirano2.github.io/liri-node-app/images/movie_none.jpg)
+If you don't input any name of movie after movie-this, Liri app shows you the searching result of "Mr. Nobody"
+
+
+###do-what-it-says
+![Image of doWhat](https://shirano2.github.io/liri-node-app/images/dowhat.jpg)
+When you input node liri.js do-what-it-says, then Liri apps read random.txt as belows, and show the result.
+![Image of random](https://shirano2.github.io/liri-node-app/images/random.jpg)
+
+
+###log.txt
+![Image of log](https://shirano2.github.io/liri-node-app/images/log.jpg)
+You can find the past results with date, command line
