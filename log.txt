@@ -80,3 +80,10 @@ Venue location : Joliet in United States
 Date of the Event : 03/28/2019
 
 ============================================================================================================
+Fri Mar 29 2019 07:49:39 GMT-0500 (중부 일광 절약 시간), command : spotify-this-song, keyword : The Sign
+============================================================================================================
+Artist(s) : Ace of Base
+The song's name : The Sign
+A preview link of the song from Spotify : https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=d881c26525bd47b8914481548e940897
+The album that the song is from : The Sign (US Album) [Remastered]
+============================================================================================================

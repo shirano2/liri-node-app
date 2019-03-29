@@ -72,6 +72,6 @@ liri.js can take following commands:
 
 
 5. log.txt
-* You can find the **past** results with date, command line
+* You can find the **past** results with date and command line
 
 ![Image of log](https://shirano2.github.io/liri-node-app/images/log.jpg)
