@@ -1,0 +1,82 @@
+Thu Mar 28 2019 20:48:24 GMT-0500 (중부 일광 절약 시간), command : concert-this, keyword : the+Browning
+============================================================================================================
+Name of the venue : 2513 Deep Ellum (formerly The Door)
+Venue location : Dallas in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : The Secret Group
+Venue location : Houston in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Southport Hall
+Venue location : New Orleans in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Crowbar
+Venue location : Tampa in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : O'Malley's Sports Bar
+Venue location : Margate in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Sound Bar
+Venue location : Orlando in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : PURGATORY AT THE MASQUERADE
+Venue location : Atlanta in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : The Firmament
+Venue location : Greenville in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : THE BLIND TIGER - CIL
+Venue location : Greensboro in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Peabody's Nightclub
+Venue location : Virginia Beach in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Voltage Lounge
+Venue location : Philadelphia in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Saint Vitus
+Venue location : Brooklyn in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Bungalow Bar & Grill
+Venue location : Manchester in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Basement Transmissions
+Venue location : Erie in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : Outpost Concert Club
+Venue location : Kent in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
+Name of the venue : The Forge
+Venue location : Joliet in United States
+Date of the Event : 03/28/2019
+
+============================================================================================================
